@@ -1,0 +1,313 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
+  <head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block title %}Backend{% endblock title %} | Muda Penuh Kreasi</title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template" />
+    <meta name="Author" content="Muda Penuh Kreasi" />
+    <meta
+      name="keywords"
+      content="admin dashboard template,admin panel html,bootstrap dashboard,admin dashboard,html template,template dashboard html,html css,bootstrap 5 admin template,bootstrap admin template,bootstrap 5 dashboard,admin panel html template,dashboard template bootstrap,admin dashboard html template,bootstrap admin panel,simple html template,admin dashboard bootstrap"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'uploaded_image/logo/fav.png' %}" type="image/x-icon" />
+
+    <!-- Choices JS -->
+    <script src="../static/libs/choices.js/public/static/scripts/choices.min.js"></script>
+
+    <!-- Main Theme Js -->
+    <script src="../static/js/main.js"></script>
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="../static/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Style Css -->
+    <link href="../static/css/styles.min.css" rel="stylesheet" />
+
+    <!-- Icons Css -->
+    <link href="../static/css/icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Node Waves Css -->
+    <link href="../static/libs/node-waves/waves.min.css" rel="stylesheet" />
+
+    <!-- Simplebar Css -->
+    <link href="../static/libs/simplebar/simplebar.min.css" rel="stylesheet" />
+
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../static/libs/flatpickr/flatpickr.min.css" />
+    <link rel="stylesheet" href="../static/libs/@simonwep/pickr/themes/nano.min.css" />
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="../static/libs/choices.js/public/static/styles/choices.min.css" />
+
+    <!-- Jsvector Maps -->
+    <link rel="stylesheet" href="../static/libs/jsvectormap/css/jsvectormap.min.css" />
+  </head>
+
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <img src="../static/images/media/loader.svg" alt="" />
+    </div>
+    <!-- Loader -->
+
+    <div class="page">
+      <!-- app-header -->
+      <header class="app-header">
+        <!-- Start::main-header-container -->
+        <div class="main-header-container container-fluid">
+          <!-- Start::header-content-left -->
+          <div class="header-content-left">
+            <!-- Start::header-element -->
+            <div class="header-element">
+              <div class="horizontal-logo">
+                <a href="index.html" class="header-logo">
+                  <img src="{% static 'uploaded_image/logo/fav.png' %}" alt="logo" class="desktop-logo" />
+                  <img src="{% static 'uploaded_image/logo/fav.png' %}" alt="logo" class="toggle-logo" />
+                  <img src="{% static 'uploaded_image/logo/fav.png' %}" alt="logo" class="desktop-white" />
+                  <img src="{% static 'uploaded_image/logo/fav.png' %}" alt="logo" class="toggle-white" />
+                </a>
+              </div>
+            </div>
+            <!-- End::header-element -->
+          </div>
+          <!-- End::header-content-left -->
+
+          <!-- Start::header-content-right -->
+          <div class="header-content-right">
+            <div class="header-element Search-element d-block d-lg-none">
+              <!-- Start::header-link|dropdown-toggle -->
+              <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside" data-bs-toggle="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="header-link-icon">
+                  <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                </svg>
+              </a>
+              <!-- End::header-link|dropdown-toggle -->
+            </div>
+
+            <!-- Start::header-element -->
+            <div class="header-element headerProfile-dropdown">
+              <!-- Start::header-link|dropdown-toggle -->
+              <a href="javascript:void(0);" class="header-link dropdown-toggle" id="mainHeaderProfile" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                <img src="../static/images/faces/6.jpg" alt="img" width="37" height="37" class="rounded-circle" />
+              </a>
+              <!-- End::header-link|dropdown-toggle -->
+              <ul class="main-header-dropdown dropdown-menu pt-0 header-profile-dropdown dropdown-menu-end main-profile-menu" aria-labelledby="mainHeaderProfile">
+                <li>
+                  <div class="main-header-profile bg-primary menu-header-content text-fixed-white">
+                    <div class="my-auto">
+                      <h6 class="mb-0 lh-1 text-fixed-white">Admin</h6>
+                      <span class="fs-11 op-7 lh-1">Admin</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex" href="#">
+                    <i class="fas fa-home fs-18 me-2 op-7"></i>
+                    Homepage</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- End::header-element -->
+          </div>
+          <!-- End::header-content-right -->
+        </div>
+        <!-- End::main-header-container -->
+      </header>
+      <!-- /app-header -->
+
+      <!-- Start::app-sidebar -->
+      <aside class="app-sidebar sticky" id="sidebar">
+        <!-- Start::main-sidebar-header -->
+        <div class="main-sidebar-header">
+          <a href="index.html" class="header-logo">
+            <img src="{% static 'uploaded_image/logo/fav.png' %}" alt="logo" class="desktop-logo" />
+            <img src="{% static 'uploaded_image/logo/fav.png' %}" alt="logo" class="toggle-logo" />
+            <img src="{% static 'uploaded_image/logo/fav.png' %}" alt="logo" class="desktop-white" />
+            <img src="{% static 'uploaded_image/logo/fav.png' %}" alt="logo" class="toggle-white" />
+          </a>
+        </div>
+        <!-- End::main-sidebar-header -->
+
+        <!-- Start::main-sidebar -->
+        <div class="main-sidebar" id="sidebar-scroll">
+          <!-- Start::nav -->
+          <nav class="main-menu-container nav nav-pills flex-column sub-open">
+            <div class="slide-left" id="slide-left">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+            </div>
+            <ul class="main-menu">
+              <!-- Start::slide__category -->
+              <li class="slide__category"><span class="category-name">Main</span></li>
+              <!-- End::slide__category -->
+
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="index.html" class="side-menu__item">
+                  <i class="fas fa-home fs-18 me-2 op-7"></i>
+                  <span class="side-menu__label">Dashboard</span>
+                  {% comment %} <span class="badge bg-success ms-auto menu-badge">1</span> {% endcomment %}
+                </a>
+              </li>
+              <!-- End::slide -->
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="index.html" class="side-menu__item">
+                  <i class="fas fa-building fs-18 me-2 op-7"></i>
+
+                  <span class="side-menu__label">Profil Perusahaan</span>
+                  {% comment %} <span class="badge bg-success ms-auto menu-badge">1</span> {% endcomment %}
+                </a>
+              </li>
+              <!-- End::slide -->
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="index.html" class="side-menu__item">
+                  <i class="fas fa-info fs-18 me-3 op-7"></i>
+                  <span class="side-menu__label">Informasi Sejarah</span>
+                  {% comment %} <span class="badge bg-success ms-auto menu-badge">1</span> {% endcomment %}
+                </a>
+              </li>
+              <!-- End::slide -->
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="index.html" class="side-menu__item">
+                  <i class="fa fa-hand-paper fs-18 me-2 op-7" aria-hidden="true"></i>
+                  {% comment %} <i class="fas fa-clock"></i> {% endcomment %}
+                  <span class="side-menu__label">Greeting</span>
+                  {% comment %} <span class="badge bg-success ms-auto menu-badge">1</span> {% endcomment %}
+                </a>
+              </li>
+              <!-- End::slide -->
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="index.html" class="side-menu__item">
+                  <i class="fa fa-server fs-18 me-2 op-7" aria-hidden="true"></i>
+                  {% comment %} <i class="fas fa-clock"></i> {% endcomment %}
+                  <span class="side-menu__label">Layanan</span>
+                  {% comment %} <span class="badge bg-success ms-auto menu-badge">1</span> {% endcomment %}
+                </a>
+              </li>
+              <!-- End::slide -->
+              <!-- Start::slide -->
+              <li class="slide">
+                <a href="index.html" class="side-menu__item">
+                  <i class="fa fa-paste fs-18 me-2 op-7" aria-hidden="true"></i>
+                  {% comment %} <i class="fas fa-clock"></i> {% endcomment %}
+                  <span class="side-menu__label">Portfolio</span>
+                  {% comment %} <span class="badge bg-success ms-auto menu-badge">1</span> {% endcomment %}
+                </a>
+              </li>
+              <!-- End::slide -->
+              <li class="slide">
+                <a href="index.html" class="side-menu__item">
+                  <i class="fa fa-layer-group fs-18 me-2 op-7" aria-hidden="true"></i>
+                  {% comment %} <i class="fas fa-clock"></i> {% endcomment %}
+                  <span class="side-menu__label">Jabatan</span>
+                  {% comment %} <span class="badge bg-success ms-auto menu-badge">1</span> {% endcomment %}
+                </a>
+              </li>
+              <!-- End::slide -->
+              <li class="slide">
+                <a href="index.html" class="side-menu__item">
+                  <i class="fa fa-users fs-18 me-2 op-7" aria-hidden="true"></i>
+                  {% comment %} <i class="fas fa-clock"></i> {% endcomment %}
+                  <span class="side-menu__label">Tim</span>
+                  {% comment %} <span class="badge bg-success ms-auto menu-badge">1</span> {% endcomment %}
+                </a>
+              </li>
+              <!-- End::slide -->
+              <li class="slide">
+                <a href="index.html" class="side-menu__item">
+                  <i class="fa fa-chart-line fs-18 me-2 op-7" aria-hidden="true"></i>
+                  {% comment %} <i class="fas fa-clock"></i> {% endcomment %}
+                  <span class="side-menu__label">Testimoni</span>
+                  {% comment %} <span class="badge bg-success ms-auto menu-badge">1</span> {% endcomment %}
+                </a>
+              </li>
+
+              <!-- End::slide -->
+            </ul>
+            <div class="slide-right" id="slide-right">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>
+            </div>
+          </nav>
+          <!-- End::nav -->
+        </div>
+        <!-- End::main-sidebar -->
+      </aside>
+      <!-- End::app-sidebar -->
+
+      <!-- Start::app-content -->
+      <div class="main-content app-content">
+        {% block content %}{% endblock content %}
+      </div>
+      <!-- End::app-content -->
+
+      <!-- Footer Start -->
+      <footer class="footer mt-auto py-3 bg-white text-center">
+        <div class="container">
+          <span class="text-muted">
+            Copyright © <span id="year"></span> <a href="javascript:void(0);" class="text-dark fw-semibold">MPK</a>
+            All rights reserved
+          </span>
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <!-- Scroll To Top -->
+    <div class="scrollToTop">
+      <span class="arrow"><i class="las la-angle-double-up"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+    <!-- Scroll To Top -->
+
+    <!-- Popper JS -->
+    <script src="../static/libs/@popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../static/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="../static/js/defaultmenu.min.js"></script>
+
+    <!-- Node Waves JS-->
+    <script src="../static/libs/node-waves/waves.min.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="../static/js/sticky.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="../static/libs/simplebar/simplebar.min.js"></script>
+    <script src="../static/js/simplebar.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="../static/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- Apex Charts JS -->
+    <script src="../static/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- JSVector Maps JS -->
+    <script src="../static/libs/jsvectormap/js/jsvectormap.min.js"></script>
+
+    <!-- JSVector Maps MapsJS -->
+    <script src="../static/libs/jsvectormap/maps/world-merc.js"></script>
+    <script src="../static/js/us-merc-en.js"></script>
+
+    <!-- Chartjs Chart JS -->
+    <script src="../static/js/index.js"></script>
+
+    <!-- Custom-Switcher JS -->
+    <script src="../static/js/custom-switcher.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../static/js/custom.js"></script>
+  </body>
+</html>
